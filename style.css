@@ -1,0 +1,51 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #80D0FF, #FF80C0); /* Gradient background */
+  }
+  
+  /* Navigation bar styles */
+  nav {
+    background-color: #4caf50; /* Green background */
+    overflow: hidden;
+  }
+  
+  nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #45a049; /* Darker green on hover */
+    color: black;
+  }
+  
+  /* Section styles */
+  section {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+  h2 {
+    color: #ff5722; /* Orange heading */
+  }
+  
+  p {
+    color: #333; /* Dark gray text */
+  }
+  
