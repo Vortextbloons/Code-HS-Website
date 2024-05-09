@@ -200,6 +200,26 @@ function createTowerCard(tower) {
     towerCard.appendChild(towerDescription);
     towerCard.appendChild(upgradePathList);
 
+    // Set color and hover animation based on category
+    switch (tower.category) {
+        case "category1":
+            towerCard.style.backgroundColor = "red";
+            towerCard.style.transition = "background-color 0.3s ease";
+            break;
+        case "category2":
+            towerCard.style.backgroundColor = "blue";
+            towerCard.style.transition = "background-color 0.3s ease";
+            break;
+        case "category3":
+            towerCard.style.backgroundColor = "green";
+            towerCard.style.transition = "background-color 0.3s ease";
+            break;
+        default:
+            towerCard.style.backgroundColor = "gray";
+            towerCard.style.transition = "background-color 0.3s ease";
+            break;
+    }
+
     return towerCard;
 }
 
