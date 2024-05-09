@@ -1,11 +1,11 @@
-/* Reset CSS */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Body styles */
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #80D0FF, #FF80C0); /* Gradient background */
@@ -69,4 +69,107 @@ p {
         margin: 0 auto 10px; /* Center image and add space below */
         display: block; /* Make image a block element */
     }
+}
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #80D0FF, #FF80C0);
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Navigation bar styles */
+header {
+    background-color: #4caf50;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #45a049;
+    color: black;
+}
+
+nav a.active {
+    background-color: #45a049;
+    color: black;
+}
+
+/* Main content styles */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tower-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.tower-card {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tower-card h3 {
+    color: #ff5722;
+    margin-bottom: 5px;
+}
+
+.tower-card p {
+    margin-bottom: 10px;
+}
+
+.tower-card ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.tower-card li::before {
+    content: "\2022";
+    color: #4caf50;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Footer styles */
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
