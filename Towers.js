@@ -131,7 +131,25 @@ const towerData = [
                     "Plasma Blasts: Fires plasma blasts that can pop multiple bloons at once.",
                     "Sun Avatar: Transforms into a Sun Avatar that shoots powerful sun beams."
                 ]
-            }
+            },
+            {
+                name: "Alchemist",
+                description: "Throws potions that buff nearby towers and damage bloons. The Alchemist is a versatile support tower that can provide valuable buffs and debuffs to nearby towers.",
+                upgradePaths: [
+                    "Acidic Mixture Dip: Adds a powerful acid attack that can damage and weaken bloons.",
+                    "Berserker Brew: Grants nearby towers increased attack speed and pierce.",
+                    "Bloon Master Alchemist: Transforms into a Bloon Master Alchemist that can deal massive damage to bloons."
+                ]
+            },
+            {
+                name: "Druid",
+                description: "Summons the forces of nature to attack bloons. The Druid is a versatile tower that can summon powerful storms and creatures to deal with bloons.",
+                upgradePaths: [
+                    "Heart of Thunder: Summons a powerful storm that can damage and stun bloons.",
+                    "Druid of the Jungle: Summons vines that can slow down and damage bloons.",
+                    "Avatar of Wrath: Transforms into an Avatar of Wrath that can unleash devastating attacks on bloons."]
+                
+            },
             
         ]
     },
@@ -173,7 +191,17 @@ const towerData = [
                     "Overclock: Increases the attack speed of nearby towers for a short duration.",
                     "Bloon Trap: Deploys a powerful trap that can catch and hold bloons in place."
                 ]
+            },
+            {
+                name: "Beast Handler",
+                description: "Summons powerful beasts to attack bloons. The Beast Handler is a versatile tower that can summon and control powerful creatures to deal with bloons.",
+                upgradePaths: [
+                    "Tiger Tamer: Summons a powerful tiger that can shred through bloons.",
+                    "Bear Trainer: Summons a bear that can stun and damage bloons.",
+                    "Dragon Master: Transforms into a Dragon Master that can unleash devastating attacks on bloons."
+                ]
             }
+
         ]
     }
 ];
@@ -200,6 +228,21 @@ function createTowerCard(tower) {
     towerCard.appendChild(towerDescription);
     towerCard.appendChild(upgradePathList);
     // Set color and hover animation based on category
+    if(tower.type === "Primary") {
+        towerCard.style.backgroundColor = "#FFD700";
+        towerCard.classList.add("primary-tower");
+    } else if(tower.type === "Military") {
+        towerCard.style.backgroundColor = "#C0C0C0";
+        towerCard.classList.add("military-tower");
+    } else if(tower.type === "Magic") {
+        towerCard.style.backgroundColor = "#FF69B4";
+        towerCard.classList.add("magic-tower");
+    }
+    else if(tower.type === "Support") {
+        towerCard.style.backgroundColor = "#00FF00";
+        towerCard.classList.add("support-tower");
+    }
+    
     
     
     
