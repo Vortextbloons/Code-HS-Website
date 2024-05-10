@@ -55,8 +55,8 @@ const towerData = [
                     "Even Faster Shooting: Increases the attack speed of the tower.",
                     "Ring of Fire: Adds a ring of fire around the tower that can damage bloons.",
                     "Blade Maelstrom: Transforms the tower into a powerful tornado of blades that can shred through even the toughest bloons."]
-            }
-        ]
+            },
+        ],
     },
     {
         type: "Military",
@@ -68,44 +68,44 @@ const towerData = [
                     "Full Metal Jacket: Increases the pierce and damage of the sniper shots.",
                     "Night Vision Goggles: Allows the tower to detect and target camo bloons.",
                     "Elite Defender: Transforms into an Elite Defender that can unleash powerful attacks on bloons."]
-            }
-        ]
-    },
-    {
-        name: "Monkey Buccaneer",
-        description: "A naval tower that attacks bloons from the water. The Monkey Buccaneer is a versatile tower that can target both land and water-based bloons.",
-        upgradePaths: [
-            "Grape Shot: Fires a spread of grape shots that can pop multiple bloons.",
-            "Hot Shot: Adds a powerful fire attack that can damage and burn bloons.",
-            "Pirate Lord: Transforms into a Pirate Lord that can unleash devastating attacks on bloons."
-        ]
-    },
-    {
-        name: "Monkey Ace",
-        description: "A flying tower that drops bombs and shoots darts from the sky. The Monkey Ace is a versatile tower that can cover a large area with its attacks.",
-        upgradePaths: [
-            "Rapid Fire: Increases the attack speed of the Monkey Ace.",
-            "Spy Plane: Reveals camo bloons and increases the accuracy of the Monkey Ace.",
-            "Operation: Dart Storm: Unleashes a storm of darts that can shred through bloons."
-        ]
-    },
-    {
-        name: "Heli Pilot",
-        description: "A helicopter tower that attacks bloons from the air. The Heli Pilot is a versatile tower that can chase and target bloons with precision.",
-        upgradePaths: [
-            "Razor Rotors: Increases the attack speed and damage of the Heli Pilot.",
-            "Support Chinook: Provides support and drops crates for nearby towers.",
-            "Apache Prime: Transforms into an Apache Prime that can unleash devastating attacks on bloons."
-        ]
-    },
-    {
-        name: "Mortar Monkey",
-        description: "Launches explosive shells that deal area-of-effect damage. The Mortar Monkey is a powerful tower that can rain down destruction on groups of bloons.",
-        upgradePaths: [
-            "Bigger Blast: Increases the blast radius of the Mortar Monkey.",
-            "Signal Flare: Reveals camo bloons and increases the accuracy of the Mortar Monkey.",
-            "The Biggest One: Unleashes a massive shell that can obliterate bloons."
-        ]
+            },
+
+            {
+                name: "Monkey Buccaneer",
+                description: "A naval tower that attacks bloons from the water. The Monkey Buccaneer is a versatile tower that can target both land and water-based bloons.",
+                upgradePaths: [
+                    "Grape Shot: Fires a spread of grape shots that can pop multiple bloons.",
+                    "Hot Shot: Adds a powerful fire attack that can damage and burn bloons.",
+                    "Pirate Lord: Transforms into a Pirate Lord that can unleash devastating attacks on bloons."
+                ]
+            },
+            {
+                name: "Monkey Ace",
+                description: "A flying tower that drops bombs and shoots darts from the sky. The Monkey Ace is a versatile tower that can cover a large area with its attacks.",
+                upgradePaths: [
+                    "Rapid Fire: Increases the attack speed of the Monkey Ace.",
+                    "Spy Plane: Reveals camo bloons and increases the accuracy of the Monkey Ace.",
+                    "Operation: Dart Storm: Unleashes a storm of darts that can shred through bloons."
+                ]
+            },
+            {
+                name: "Heli Pilot",
+                description: "A helicopter tower that attacks bloons from the air. The Heli Pilot is a versatile tower that can chase and target bloons with precision.",
+                upgradePaths: [
+                    "Razor Rotors: Increases the attack speed and damage of the Heli Pilot.",
+                    "Support Chinook: Provides support and drops crates for nearby towers.",
+                    "Apache Prime: Transforms into an Apache Prime that can unleash devastating attacks on bloons."
+                ]
+            },
+            {
+                name: "Mortar Monkey",
+                description: "Launches explosive shells that deal area-of-effect damage. The Mortar Monkey is a powerful tower that can rain down destruction on groups of bloons.",
+                upgradePaths: [
+                    "Bigger Blast: Increases the blast radius of the Mortar Monkey.",
+                    "Signal Flare: Reveals camo bloons and increases the accuracy of the Mortar Monkey.",
+                    "The Biggest One: Unleashes a massive shell that can obliterate bloons."
+                ]
+            }]
     },
     {
         type: "Magic",
@@ -157,8 +157,7 @@ const towerData = [
             },
 
         ]
-    },
-    {
+    }, {
         type: "Support",
         towers: [
             {
@@ -208,8 +207,8 @@ const towerData = [
             }
 
         ]
-    }
-];
+
+    }];
 
 // Function to create a tower card element
 function createTowerCard(tower) {
