@@ -74,7 +74,31 @@ const mapData = [
                     "Limited visibility due to the maze layout.",
                     "Strategic tower placement is key."
                 ]
+            },
+            {
+                name: "Spring Spring",
+                description: "A map with a spring theme and bloons bouncing around the track.",
+                uniqueDetails: [
+                    "Bloons can bounce over obstacles.",
+                    "Strategic tower placement is crucial."
+                ]
+            },
+            {
+                name: "KartsNDarts",
+                description: "A racing-themed map with a track winding through the course.",
+                uniqueDetails: [
+                    "Bloons travel along",
+                    "Strategic tower placement is essential."]
+            },
+            {
+                name: "Moon Landing",
+                description: "A map set on the moon with low gravity and unique challenges.",
+                uniqueDetails: [
+                    "Low gravity affects tower and bloon movement.",
+                    "Strategic tower placement is crucial."
+                ]
             }
+
         ]
     },
     {
@@ -134,7 +158,16 @@ const mapData = [
                     "Bloons can take different paths through the chutes.",
                     "Strategic tower placement is crucial."
                 ]
-            }
+            },
+            {
+                name: "Spice Islands",
+                description: "A tropical archipelago with bloons coming from multiple directions.",
+                uniqueDetails: [
+                    "Bloons emerge from different islands.",
+                    "Strategic tower placement is essential."
+                ]
+            },
+
         ]
     },
     {
@@ -172,6 +205,22 @@ const mapData = [
                     "Narrow streets restrict tower placement."
                 ]
 
+            },
+            {
+                name: "Off The Coast",
+                description: "A coastal map with bloons traveling along the shoreline.",
+                uniqueDetails: [
+                    "Limited space for tower placement.",
+                    "Strategic tower placement is key."
+                ]
+            },
+            {
+                name: "Cornfield",
+                description: "A map set in a sprawling cornfield with twisting paths.",
+                uniqueDetails: [
+                    "Bloons travel along winding paths.",
+                    "Strategic tower placement is crucial."
+                ]
             },
         ]
     },
