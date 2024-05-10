@@ -1,214 +1,195 @@
-const Gamemode = [
+// Gamemode data
+const gamemodeData = [
     {
-        Difficulty: "Easy",
-        Gamemodes: [
+        type: "Easy",
+        gamemodes: [
             {
-                Name: "Easy",
-                Description: "Easy mode is the easiest mode in the game.",
-                Properties: {
-                    Rounds: 40,
-                    CostMultiplier: 0.85,
-                    Limitations: "None"
+                name: "Easy",
+                description: "Easy mode is the easiest mode in the game.",
+                properties: {
+                    rounds: 40,
+                    costMultiplier: 0.85,
+                    limitations: "None"
                 }
             },
             {
-                Name: "Primary Only",
-                Description: "Primary Only mode is a mode where you can only use your primary weapon.",
-                Properties: {
-                    Rounds: 40,
-                    CostMultiplier: 0.85,
-                    Limitations: "Primary Only"
-                }
-
-            },
-            {
-                Name: "Deflation",
-                Description: "Deflation mode is a mode where you start with only 20000 cash and you can't get more.",
-                Properties: {
-                    Rounds: 30,
-                    CostMultiplier: 0.85,
-                    Limitations: "No Income"
-                }
-            },
-        ]
-    },
-    {
-        Difficulty: "Medium",
-        Gamemodes: [
-            {
-                Name: "Medium",
-                Description: "Medium mode is the medium mode in the game.",
-                Properties: {
-                    Rounds: 60,
-                    CostMultiplier: 1,
-                    Limitations: "None"
+                name: "Primary Only",
+                description: "Primary Only mode is a mode where you can only use your primary weapon.",
+                properties: {
+                    rounds: 40,
+                    costMultiplier: 0.85,
+                    limitations: "Primary Only"
                 }
             },
             {
-                Name: "Military Only",
-                Description: "Military Only mode is a mode where you can only use military towers.",
-                Properties: {
-                    Rounds: 60,
-                    CostMultiplier: 1,
-                    Limitations: "Military Only"
+                name: "Deflation",
+                description: "Deflation mode is a mode where you start with only 20000 cash and you can't get more.",
+                properties: {
+                    rounds: 30,
+                    costMultiplier: 0.85,
+                    limitations: "No Income"
                 }
-            },
-            {
-                Name: "Reverse",
-                Description: "Reverse mode is a mode where the bloons go the opposite way.",
-                Properties: {
-                    Rounds: 60,
-                    CostMultiplier: 1,
-                    Limitations: "None"
-                }
-            },
-            {
-                Name: "Apocalypse",
-                Description: "Apocalypse mode is a mode where the bloons are faster and stronger and don't stop coming.",
-                Properties: {
-                    Rounds: 60,
-                    CostMultiplier: 1,
-                    Limitations: "You can't pause"
-                }
-
             }
         ]
     },
     {
-        Difficulty: "Hard",
-        Gamemodes: [
+        type: "Medium",
+        gamemodes: [
             {
-                Name: "Hard",
-                Description: "Hard mode is the hard mode in the game.",
-                Properties: {
-                    Rounds: 80,
-                    CostMultiplier: 1.15,
-                    Limitations: "None"
+                name: "Medium",
+                description: "Medium mode is the medium mode in the game.",
+                properties: {
+                    rounds: 60,
+                    costMultiplier: 1,
+                    limitations: "None"
                 }
             },
             {
-                Name: "Magic Only",
-                Description: "Magic Only mode is a mode where you can only use magic towers.",
-                Properties: {
-                    Rounds: 80,
-                    CostMultiplier: 1.15,
-                    Limitations: "Magic Only"
+                name: "Military Only",
+                description: "Military Only mode is a mode where you can only use military towers.",
+                properties: {
+                    rounds: 60,
+                    costMultiplier: 1,
+                    limitations: "Military Only"
                 }
             },
             {
-                Name: "Half Cash",
-                Description: "Half Cash mode is a mode where you only get half the cash.",
-                Properties: {
-                    Rounds: 80,
-                    CostMultiplier: 1.15,
-                    Limitations: "Half Cash"
+                name: "Reverse",
+                description: "Reverse mode is a mode where the bloons go the opposite way.",
+                properties: {
+                    rounds: 60,
+                    costMultiplier: 1,
+                    limitations: "None"
                 }
             },
             {
-                Name: "Double HP MOABs",
-                Description: "Double HP MOABs mode is a mode where MOABs have double HP.",
-                Properties: {
-                    Rounds: 80,
-                    CostMultiplier: 1.15,
-                    Limitations: "None"
+                name: "Apocalypse",
+                description: "Apocalypse mode is a mode where the bloons are faster and stronger and don't stop coming.",
+                properties: {
+                    rounds: 60,
+                    costMultiplier: 1,
+                    limitations: "You can't pause"
+                }
+            }
+        ]
+    },
+    {
+        type: "Hard",
+        gamemodes: [
+            {
+                name: "Hard",
+                description: "Hard mode is the hard mode in the game.",
+                properties: {
+                    rounds: 80,
+                    costMultiplier: 1.15,
+                    limitations: "None"
                 }
             },
             {
-                Name: "Alternate Bloons Rounds",
-                Description: "Alternate Bloons Rounds mode is a mode where the bloons come in a different order then normal.",
-                Properties: {
-                    Rounds: 80,
-                    CostMultiplier: 1.15,
-                    Limitations: "None"
+                name: "Magic Only",
+                description: "Magic Only mode is a mode where you can only use magic towers.",
+                properties: {
+                    rounds: 80,
+                    costMultiplier: 1.15,
+                    limitations: "Magic Only"
                 }
             },
             {
-                Name: "Impoppable",
-                Description: "Impoppable mode is a mode where you can't get any lives.",
-                Properties: {
-                    Rounds: 100,
-                    CostMultiplier: 1.35,
-                    Limitations: "No Lives Lost, Increased Money Cost"
+                name: "Half Cash",
+                description: "Half Cash mode is a mode where you only get half the cash.",
+                properties: {
+                    rounds: 80,
+                    costMultiplier: 1.15,
+                    limitations: "Half Cash"
                 }
             },
             {
-                Name: "CHIMPS",
-                Description: "CHIMPS mode is a mode where you can't use continues, Lives, income, monkey knowledge, or powers.",
-                Properties: {
-                    Rounds: 100,
-                    CostMultiplier: 1.15,
-                    Limitations: "No Continues, No Lives Lost, No Income, No Monkey Knowledge, No Powers"
+                name: "Double HP MOABs",
+                description: "Double HP MOABs mode is a mode where MOABs have double HP.",
+                properties: {
+                    rounds: 80,
+                    costMultiplier: 1.15,
+                    limitations: "None"
+                }
+            },
+            {
+                name: "Alternate Bloons Rounds",
+                description: "Alternate Bloons Rounds mode is a mode where the bloons come in a different order then normal.",
+                properties: {
+                    rounds: 80,
+                    costMultiplier: 1.15,
+                    limitations: "None"
+                }
+            },
+            {
+                name: "Impoppable",
+                description: "Impoppable mode is a mode where you can't get any lives.",
+                properties: {
+                    rounds: 100,
+                    costMultiplier: 1.35,
+                    limitations: "No Lives Lost, Increased Money Cost"
+                }
+            },
+            {
+                name: "CHIMPS",
+                description: "CHIMPS mode is a mode where you can't use continues, Lives, income, monkey knowledge, or powers.",
+                properties: {
+                    rounds: 100,
+                    costMultiplier: 1.15,
+                    limitations: "No Continues, No Lives Lost, No Income, No Monkey Knowledge, No Powers"
                 }
             }
         ]
     }
 ];
 
+// Function to create a gamemode card element
 function createGamemodeCard(gamemode) {
     const gamemodeCard = document.createElement("div");
     gamemodeCard.classList.add("gamemode-card");
 
-    const gamemodeName = document.createElement("h3");
-    gamemodeName.textContent = gamemode.Name;
+    const gamemodeNameElement = document.createElement("h3");
+    gamemodeNameElement.textContent = gamemode.name;
 
-    const gamemodeDescription = document.createElement("p");
-    gamemodeDescription.textContent = gamemode.Description;
+    const gamemodeDescriptionElement = document.createElement("p");
+    gamemodeDescriptionElement.textContent = gamemode.description;
 
-    const propertiesList = document.createElement("ul");
-    for (const property in gamemode.Properties) {
+    const propertiesListElement = document.createElement("ul");
+    for (const property in gamemode.properties) {
         const propertyItem = document.createElement("li");
-        propertyItem.textContent = `${property}: ${gamemode.Properties[property]}`;
-        propertiesList.appendChild(propertyItem);
+        propertyItem.textContent = `${property}: ${gamemode.properties[property]}`;
+        propertiesListElement.appendChild(propertyItem);
     }
 
-    gamemodeCard.appendChild(gamemodeName);
-    gamemodeCard.appendChild(gamemodeDescription);
-    gamemodeCard.appendChild(propertiesList);
+    gamemodeCard.appendChild(gamemodeNameElement);
+    gamemodeCard.appendChild(gamemodeDescriptionElement);
+    gamemodeCard.appendChild(propertiesListElement);
 
-    // Set color and hover animation based on game mode
-    switch (gamemode.Name) {
-        case "Easy":
-            gamemodeCard.style.backgroundColor = "red";
-            gamemodeCard.style.transition = "background-color 0.3s ease";
-            break;
-        case "Primary Only":
-            gamemodeCard.style.backgroundColor = "blue";
-            gamemodeCard.style.transition = "background-color 0.3s ease";
-            break;
-        case "Deflation":
-            gamemodeCard.style.backgroundColor = "green";
-            gamemodeCard.style.transition = "background-color 0.3s ease";
-            break;
-        default:
-            gamemodeCard.style.backgroundColor = "gray";
-            gamemodeCard.style.transition = "background-color 0.3s ease";
-            break;
+    // Set color and hover animation based on gamemode name
+    if (gamemode.name === "Easy") {
+        gamemodeCard.style.backgroundColor = "lightgreen";
+    } else if (gamemode.name === "Medium") {
+        gamemodeCard.style.backgroundColor = "lightblue";
+    } else if (gamemode.name === "Hard") {
+        gamemodeCard.style.backgroundColor = "lightcoral";
+    } else {
+        gamemodeCard.style.backgroundColor = "lightgrey";
     }
 
     return gamemodeCard;
 }
 
+// Function to render gamemode cards in the corresponding section
 function renderGamemodes() {
-    const gamemodeContainer = document.createElement("div");
-    gamemodeContainer.classList.add("gamemode-container");
+    gamemodeData.forEach(difficultyLevel => {
+        const gamemodeList = document.querySelectorAll(".gamemode-list")[difficultyLevel.type === "Easy" ? 0 : difficultyLevel.type === "Medium" ? 1 : 2];
 
-    Gamemode.forEach(difficultyLevel => {
-        const difficultyHeader = document.createElement("h2");
-        difficultyHeader.textContent = difficultyLevel.Difficulty;
-        gamemodeContainer.appendChild(difficultyHeader);
-
-        const gamemodeList = document.createElement("div");
-        gamemodeList.classList.add("gamemode-list");
-
-        difficultyLevel.Gamemodes.forEach(gamemode => {
+        difficultyLevel.gamemodes.forEach(gamemode => {
             const gamemodeCard = createGamemodeCard(gamemode);
             gamemodeList.appendChild(gamemodeCard);
         });
-
-        gamemodeContainer.appendChild(gamemodeList);
     });
-
-    document.body.appendChild(gamemodeContainer);
 }
 
+// Call the renderGamemodes function to display the gamemode cards
 renderGamemodes();
