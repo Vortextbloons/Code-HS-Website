@@ -231,22 +231,16 @@ function createTowerCard(tower) {
     towerCard.appendChild(towerName);
     towerCard.appendChild(towerDescription);
     towerCard.appendChild(upgradePathList);
-    // Set color and hover animation based on category
-    if (tower.type === "Primary") {
-        towerCard.style.backgroundColor = "#FFD700";
-        towerCard.classList.add("primary-tower");
-    } else if (tower.type === "Military") {
-        towerCard.style.backgroundColor = "#C0C0C0";
-        towerCard.classList.add("military-tower");
-    } else if (tower.type === "Magic") {
-        towerCard.style.backgroundColor = "#FF69B4";
-        towerCard.classList.add("magic-tower");
+    // Set the color of the tower card based on the tower type//
+    if (tower.name === "Dart Monkey" || tower.name === "Boomerang Monkey" || tower.name === "Bomb Shooter" || tower.name === "Ice Monkey" || tower.name === "Glue Gunner" || tower.name === "Tack Shooter") {
+        towerCard.style.backgroundColor = "lightblue";
+    } else if (tower.name === "Sniper Monkey" || tower.name === "Monkey Buccaneer" || tower.name === "Monkey Ace" || tower.name === "Heli Pilot" || tower.name === "Mortar Monkey") {
+        towerCard.style.backgroundColor = "lightgreen";
+    } else if (tower.name === "Wizard Monkey" || tower.name === "Ninja Monkey" || tower.name === "Super Monkey" || tower.name === "Alchemist" || tower.name === "Druid") {
+        towerCard.style.backgroundColor = "violet";
+    } else {
+        towerCard.style.backgroundColor = "gold";
     }
-    else if (tower.type === "Support") {
-        towerCard.style.backgroundColor = "#00FF00";
-        towerCard.classList.add("support-tower");
-    }
-
 
 
 
