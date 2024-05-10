@@ -165,17 +165,41 @@ function createGamemodeCard(gamemode) {
     gamemodeCard.appendChild(gamemodeDescriptionElement);
     gamemodeCard.appendChild(propertiesListElement);
 
-    // Set color and hover animation based on gamemode name
+    // Set color based on the name of the gamemode and type type snare the same color as eachohter
     if (gamemode.name === "Easy") {
-        gamemodeCard.style.backgroundColor = "lightgreen";
+        gamemodeCard.style.backgroundColor = "limegreen";
+    } else if (gamemode.name === "Primary Only") {
+        gamemodeCard.style.backgroundColor = "limegreen";
+    } else if (gamemode.name === "Deflation") {
+        gamemodeCard.style.backgroundColor = "limegreen";
     } else if (gamemode.name === "Medium") {
-        gamemodeCard.style.backgroundColor = "lightblue";
+        gamemodeCard.style.backgroundColor = "yellow";
+    } else if (gamemode.name === "Military Only") {
+        gamemodeCard.style.backgroundColor = "yellow";
+    } else if (gamemode.name === "Reverse") {
+        gamemodeCard.style.backgroundColor = "yellow";
+    } else if (gamemode.name === "Apocalypse") {
+        gamemodeCard.style.backgroundColor = "yellow";
     } else if (gamemode.name === "Hard") {
-        gamemodeCard.style.backgroundColor = "lightcoral";
-    } else {
-        gamemodeCard.style.backgroundColor = "lightgrey";
+        gamemodeCard.style.backgroundColor = "red";
+    } else if (gamemode.name === "Magic Only") {
+        gamemodeCard.style.backgroundColor = "red";
+    } else if (gamemode.name === "Half Cash") {
+        gamemodeCard.style.backgroundColor = "red";
+    } else if (gamemode.name === "Double HP MOABs") {
+        gamemodeCard.style.backgroundColor = "red";
+    }
+    else if (gamemode.name === "Alternate Bloons Rounds") {
+        gamemodeCard.style.backgroundColor = "red";
+    } else if (gamemode.name === "Impoppable") {
+        gamemodeCard.style.backgroundColor = "red";
+    } else if (gamemode.name === "CHIMPS") {
+        gamemodeCard.style.backgroundColor = "red";
     }
 
+
+
+    console.log(gamemode)
     return gamemodeCard;
 }
 
