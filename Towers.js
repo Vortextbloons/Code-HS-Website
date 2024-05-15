@@ -1,7 +1,7 @@
 
 
 // Tower data (you can replace this with your actual tower data)
-const towerData = [
+export const towerData = [
     {
         type: "Primary",
         towers: [
@@ -210,7 +210,7 @@ const towerData = [
 
         ]
 
-    }];
+}];
 
 // Function to create a tower card element
 function createTowerCard(tower) {
@@ -233,16 +233,8 @@ function createTowerCard(tower) {
     towerCard.appendChild(towerName);
     towerCard.appendChild(towerDescription);
     towerCard.appendChild(upgradePathList);
-    // Set the color of the tower card based on the tower type//
-    if (tower.name === "Dart Monkey" || tower.name === "Boomerang Monkey" || tower.name === "Bomb Shooter" || tower.name === "Ice Monkey" || tower.name === "Glue Gunner" || tower.name === "Tack Shooter") {
-        towerCard.style.backgroundColor = "lightblue";
-    } else if (tower.name === "Sniper Monkey" || tower.name === "Monkey Buccaneer" || tower.name === "Monkey Ace" || tower.name === "Heli Pilot" || tower.name === "Mortar Monkey") {
-        towerCard.style.backgroundColor = "lightgreen";
-    } else if (tower.name === "Wizard Monkey" || tower.name === "Ninja Monkey" || tower.name === "Super Monkey" || tower.name === "Alchemist" || tower.name === "Druid") {
-        towerCard.style.backgroundColor = "violet";
-    } else {
-        towerCard.style.backgroundColor = "gold";
-    }
+    // add a class based on the tower type 
+
 
 
 
@@ -259,6 +251,7 @@ function renderTowers() {
         towerType.towers.forEach(tower => {
             const towerCard = createTowerCard(tower);
             towerList.appendChild(towerCard);
+            towerCard.classList.add(towerType.type)
         });
     });
 }

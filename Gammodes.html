@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
     <link rel="stylesheet" href="style.css">            }
     <style>
         /* make is so that the bullets are in the section */
+        .gamemode-card.Easy {
+            background-color: lime;
+        }
+        .gamemode-card.Medium {
+            background-color: yellow;
+        }   
+        .gamemode-card.Hard {
+            background-color: red;
+        }
         section {
             list-style-position: inside;
         }
@@ -18,11 +25,8 @@
                 font-weight: bold;
             }
     </style>
-
 </head>
-
 <body>
-
     <body>
         <img src="Assetets/Adora btd6-Photoroom.png-Photoroom.png" alt="">
         <nav>
@@ -36,7 +40,6 @@
             <section>
                 <h2>Easy Game Modes</h2>
                 <div class="gamemode-list">
-
                 </div>
             </section>
                 <section>
@@ -47,12 +50,10 @@
                 <h2>Hard Game Modes</h2>
                 <div class="gamemode-list"></div>
             </section>
-           
         </main>
         <footer>
             <p>&copy; 2024 Bloons Helper</p>
         </footer>
-        <script src="Gamemodes.js" defer></script>
+        <script src="Gamemodes.js" type="module" defer></script>
     </body>
-
 </html>

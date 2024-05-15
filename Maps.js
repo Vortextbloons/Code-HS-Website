@@ -1,5 +1,5 @@
 // Map data
-const mapData = [
+export const mapData = [
     {
         type: "Beginner",
         maps: [
@@ -247,17 +247,9 @@ function createMapCard(map) {
     mapCard.appendChild(mapNameElement);
     mapCard.appendChild(mapDescriptionElement);
     mapCard.appendChild(uniqueDetailsList);
-    // set the color based on the map difficulty
-    if (map.name === "Monkey Meadow" || map.name === "Town Center" || map.name === "The Glacier" || map.name === "In The Loop" || map.name === "End Of The Road" || map.name === "Logs" || map.name === "Cubism" || map.name === "Four Circles" || map.name === "Hedge" || map.name === "Spring Spring" || map.name === "KartsNDarts" || map.name === "Moon Landing") {
-        mapCard.style.backgroundColor = "lightgreen";
-    } else if (map.name === "Carved" || map.name === "Haunted Swamp" || map.name === "Cargo Bay" || map.name === "Clock" || map.name === "Cracked" || map.name === "Streambed" || map.name === "Chutes" || map.name === "Spice Islands") {
-        mapCard.style.backgroundColor = "yellow";
-    } else if (map.name === "Bloody Puddles" || map.name === "Ravine" || map.name === "Quad" || map.name === "Another Brick" || map.name === "Off The Coast" || map.name === "Cornfield") {
-        mapCard.style.backgroundColor = "#FF6347";
-    }
+    
     return mapCard;
 }
-
 // Function to render map cards in the corresponding section
 function renderMaps() {
     mapData.forEach(difficultyLevel => {
@@ -266,6 +258,7 @@ function renderMaps() {
         difficultyLevel.maps.forEach(map => {
             const mapCard = createMapCard(map);
             mapList.appendChild(mapCard);
+            mapCard.classList.add(difficultyLevel.type)
         });
     });
 }

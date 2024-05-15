@@ -6,9 +6,20 @@
     <title>BTD6 Towers</title>
     <link rel="stylesheet" href="style.css">
     <img src="Assetets/Adora btd6-Photoroom.png-Photoroom.png" alt="">
-    <script src="Towers.js" defer   ></script>
+    <script src="Towers.js" defer type="module"></script>
         <style>
-            /* Add custom styles for the tower list */
+            .tower-card.Primary{
+                background-color: lightskyblue;
+            }
+            .tower-card.Military{
+                background-color: lightgreen;
+            }
+            .tower-card.Magic{
+                background-color: violet;
+            }
+            .tower-card.Support{
+                background-color: gold;
+            }
             .tower-list {
                 display: flex;
                 flex-wrap: wrap;
@@ -24,9 +35,7 @@
             }
             
 
-            .tower-list div:hover {
-                background-color: #e1e1e1;
-            }
+      
             section {
                 background-color: #f9f9f9;
                 padding: 20px;
