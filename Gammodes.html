@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">            }
+    <link rel="stylesheet" href="style.css"> }
     <style>
         /* make is so that the bullets are in the section */
         .gamemode-card.Easy {
             background-color: lime;
         }
+
         .gamemode-card.Medium {
             background-color: yellow;
-        }   
+        }
+
         .gamemode-card.Hard {
             background-color: red;
         }
+
         section {
             list-style-position: inside;
         }
-            /* make it so that the nav bar items are black when on the current page */
-            nav a[href$="Gammodes.html"] {
-                color: black;
-                font-weight: bold;
-            }
+
+        /* make it so that the nav bar items are black when on the current page */
+        nav a[href$="Gammodes.html"] {
+            color: black;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
+
     <body>
         <img src="Assetets/Adora btd6-Photoroom.png-Photoroom.png" alt="">
         <nav>
@@ -43,7 +50,7 @@
                 <div class="gamemode-list">
                 </div>
             </section>
-                <section>
+            <section>
                 <h2>Medium Game Modes</h2>
                 <div class="gamemode-list"></div>
             </section>
@@ -55,6 +62,10 @@
         <footer>
             <p>&copy; 2024 Bloons Helper</p>
         </footer>
-        <script src="Gamemodes.js" type="module" defer></script>
+        <script type="module" defer>
+            import {renderGamemodes} from './Gamemodes.js';
+            renderGamemodes()
+        </script>
     </body>
+
 </html>

@@ -244,7 +244,7 @@ function createTowerCard(tower) {
 }
 
 // Function to render tower cards in the corresponding section
-function renderTowers() {
+export function renderTowers() {
     towerData.forEach(towerType => {
         const towerList = document.querySelectorAll(".tower-list")[towerType.type === "Primary" ? 0 : towerType.type === "Military" ? 1 : towerType.type === "Magic" ? 2 : 3];
 
@@ -256,5 +256,4 @@ function renderTowers() {
     });
 }
 
-// Call the renderTowers function to display the tower cards
-renderTowers();
+

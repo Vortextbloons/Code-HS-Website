@@ -165,16 +165,15 @@ function createGamemodeCard(gamemode) {
     gamemodeCard.appendChild(gamemodeDescriptionElement);
     gamemodeCard.appendChild(propertiesListElement);
 
-  
 
 
 
-    console.log(gamemode)
+
     return gamemodeCard;
 }
 
 // Function to render gamemode cards in the corresponding section
-function renderGamemodes() {
+export function renderGamemodes() {
     gamemodeData.forEach(difficultyLevel => {
         const gamemodeList = document.querySelectorAll(".gamemode-list")[difficultyLevel.type === "Easy" ? 0 : difficultyLevel.type === "Medium" ? 1 : 2];
 
@@ -186,5 +185,4 @@ function renderGamemodes() {
     });
 }
 
-// Call the renderGamemodes function to display the gamemode cards
-renderGamemodes();
+

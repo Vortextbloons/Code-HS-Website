@@ -127,7 +127,7 @@ export const mapData = [
                     "Maze-like layout with tight spaces.",
                     "Obstacles block certain areas for tower placement."
                 ]
-            },{
+            }, {
                 name: "Clock",
                 description: "A clock-themed map with gears and cogs turning in the background.",
                 uniqueDetails: [
@@ -247,11 +247,11 @@ function createMapCard(map) {
     mapCard.appendChild(mapNameElement);
     mapCard.appendChild(mapDescriptionElement);
     mapCard.appendChild(uniqueDetailsList);
-    
+
     return mapCard;
 }
 // Function to render map cards in the corresponding section
-function renderMaps() {
+export function renderMaps() {
     mapData.forEach(difficultyLevel => {
         const mapList = document.querySelectorAll(".map-list")[difficultyLevel.type === "Beginner" ? 0 : difficultyLevel.type === "Intermediate" ? 1 : 2];
 
@@ -264,4 +264,3 @@ function renderMaps() {
 }
 
 // Call the renderMaps function to display the map cards
-renderMaps();
